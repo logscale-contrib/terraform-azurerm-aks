@@ -467,6 +467,7 @@ resource "azurerm_kubernetes_cluster" "main" {
     network_plugin      = var.network_plugin
     dns_service_ip      = var.net_profile_dns_service_ip
     ebpf_data_plane     = var.ebpf_data_plane
+    ip_versions         = ["IPv4", "IPv6"]
     load_balancer_sku   = var.load_balancer_sku
     network_plugin_mode = var.network_plugin_mode
     network_policy      = var.network_policy
